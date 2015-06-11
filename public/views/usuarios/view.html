@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<form class="form-vertical text-left" name="editForm">
+			<h3 class="text-center">Usuarios</h3>
+			<fieldset ng-show="dataReceived">
+				<div class="form-group">
+					<label for="valueUsername">Username</label>
+					<div id="valueUsername">{{usuarios.username}}</div>
+				</div>
+				<div class="form-group">
+					<label for="valuePassword">Password</label>
+					<div id="valuePassword">{{usuarios.password}}</div>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary" ng-click="gotoList($event)" >Back</button>
+					<button class="btn btn-primary" ng-click="edit($event)" >Edit</button>
+				</div>
+			</fieldset>
+			<div ng-hide="dataReceived" class="loader"><img src="images/loader.gif" alt="Loading..." /></div>
+		</form>
+
+	</div>
+	<div class="col-md-4"></div>
+</div>
